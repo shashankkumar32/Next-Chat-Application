@@ -14,6 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 // import InboxIcon from '@mui/icons-material/MoveToInbox';
 // import MailIcon from '@mui/icons-material/Mail';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
+import IconBox from './component/IconBox';
 
 
 
@@ -25,7 +26,7 @@ const SideBar=({
      boxShadow: " 10px 12px 14px 10px rgba(0, 0, 0, 0)",
     
      }}>
-      <Typography>
+      <Typography sx={{display:"flex", justifyContent:"center",fontWeight:"450px",fontSize:"17px",pt:3}}>
         Chat ON
       </Typography>
      
@@ -37,11 +38,12 @@ const SideBar=({
         }}>
           {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
             <ListItem sx={{display:"flex",justifyContent:"center",backgroundColor:"58ECFC"}} key={text} disablePadding>
-              <ListItemButton  sx={{ display:"flex",justifyContent:"Center" ,py:2,backgroundColor:"58ECFC"}} >
-                <ListItemIcon sx={{display:"flex",justifyContent:"center"}}>
+              <ListItemButton  sx={{ display:"flex",justifyContent:"Center" ,py:2,backgroundColor:"58ECFC",}} >
+                {/* <ListItemIcon sx={{display:"flex",justifyContent:"center"}}>
 
                 <AcUnitIcon/>
-                </ListItemIcon>
+                </ListItemIcon> */}
+                <IconBox/>
              
               </ListItemButton>
             </ListItem>
